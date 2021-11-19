@@ -1,3 +1,5 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /
+Sitemap: https://aleksander-wielki.netlify.app/sitemap.xml
+Host: https://aleksander-wielki.netlify.app
+
