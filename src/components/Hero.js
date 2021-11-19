@@ -17,7 +17,7 @@ const Hero = () => {
         <div className="content">
           <p>Ἀλέξανδρος ὁ Μέγας</p>
           <p>άνίκητος</p>
-          <p>Aleksander Wielki</p>
+          <h1>Aleksander Wielki</h1>
           <p>365 p.n.e. - 323 p.n.e.</p>
           <button onClick={() => Toggle()} className="button">
             Więcej
