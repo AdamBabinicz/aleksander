@@ -1,0 +1,68 @@
+.hero {
+  background: var(--overlay);
+  color: #fff;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+.hero::before {
+  content: "";
+  background: url("../images/3.png") 50% 80%/50% no-repeat;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.hero .content {
+  height: 100%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  padding: 1rem;
+}
+.hero .content p:first-child {
+  font-style: italic;
+  font-size: 0.9rem;
+}
+.hero .content p:nth-child(2) {
+  font-size: 1.9rem;
+}
+.hero .content p:nth-child(3) {
+  font-size: 5rem;
+  font-family: "Gideon Roman", cursive;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.hero .content p:nth-child(4) {
+  font-size: 2.2rem;
+  font-family: "Gideon Roman", cursive;
+  font-style: italic;
+}
+.hero .button {
+  margin: 1rem 0;
+  width: 300px;
+  background: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+  transition: all 0.3s ease-in-out;
+  color: #333;
+}
+.hero .button:hover {
+  background: var(--secondary-dark);
+  border: 1px solid var(--secondary-dark);
+}
+
+@media only screen and (max-width: 940px) {
+  .hero::before {
+    background: url("../images/3.png") 10% 60% / contain no-repeat;
+  }
+  .hero .content p:nth-child(3) {
+    font-size: 2.6rem;
+  }
+  .hero .content p:nth-child(4) {
+    font-size: 1.6rem;
+  }
+}
