@@ -2,10 +2,9 @@ import React, { useState, useEffect } from "react";
 import logo from "../images/3.svg";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "./Navbar.css";
-import { Link } from "react-router-dom";
 import { animateScroll as scroll } from "react-scroll";
 
-const Navbar = ({ toggle }) => {
+const Navbar = () => {
   const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);
@@ -31,8 +30,8 @@ const Navbar = ({ toggle }) => {
 
   return (
     <>
-      <div className="header" scrollNav={scrollNav}>
-        <div className="navbar">
+      <div className="header">
+        <div className="navbar" scrollNav={scrollNav}>
           <a href="#start" className="logo" onClick={toggleHome}>
             <img src={logo} alt="..." />
           </a>
@@ -45,22 +44,21 @@ const Navbar = ({ toggle }) => {
           </div>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item" onClick={closeMenu}>
-              <Link
-                to="/"
-                onClick={toggleHome}
+              <a
+                href="#start"
                 smooth={true}
                 duration={500}
                 spy={true}
                 exact="true"
                 offset={-80}
+                // onClick={toggleHome}
               >
                 Start
-              </Link>
+              </a>
             </li>
             <li className="nav-item" onClick={closeMenu}>
               <a
                 href="#strateg"
-                onClick={toggleHome}
                 smooth={true}
                 duration={500}
                 spy={true}
@@ -70,13 +68,27 @@ const Navbar = ({ toggle }) => {
                 Strateg
               </a>
             </li>
-            <li className="nav-item">
-              <a href="#podboje" onClick={closeMenu}>
+            <li className="nav-item" onClick={closeMenu}>
+              <a
+                href="#podboje"
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact="true"
+                offset={-80}
+              >
                 Podboje
               </a>
             </li>
-            <li className="nav-item">
-              <a href="#dziedzictwo" onClick={closeMenu}>
+            <li className="nav-item" onClick={closeMenu}>
+              <a
+                href="#dziedzictwo"
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact="true"
+                offset={-80}
+              >
                 Dziedzictwo
               </a>
             </li>
