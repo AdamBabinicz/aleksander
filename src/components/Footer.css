@@ -42,4 +42,7 @@
   .footer .container li a {
     font-size: 0.9rem;
   }
+  .bottom p.text {
+    font-size: 0.8rem;
+  }
 }

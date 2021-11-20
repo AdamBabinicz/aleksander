@@ -21,10 +21,9 @@ const Footer = () => {
         </ul>
         <div className="bottom">
           <span className="line"></span>
-          <p>
-            2021 - {new Date().getFullYear()}.<br />
-            <br /> Na podstawie "pl.wikipedia.org"
-          </p>
+          <p>2021 - {new Date().getFullYear()}.</p>
+          <br />
+          <br /> <p className="text">Na podstawie "pl.wikipedia.org"</p>
         </div>
       </div>
     </div>
